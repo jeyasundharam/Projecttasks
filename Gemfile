@@ -8,6 +8,13 @@ end
 gem 'nested_form'
 gem "jquery-rails"
 gem 'bootstrap-sass'
+gem 'devise'
+gem 'omniauth'
+gem 'figaro' #for facebook  
+gem 'omniauth-facebook'
+gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use mysql as the database for Active Record
@@ -40,6 +47,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  gem 'dotenv-rails'
   gem 'selenium-webdriver'
 end
 

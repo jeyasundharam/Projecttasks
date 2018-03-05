@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
   
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  get 'home/show'
+
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :models
+  
   get 'tasks/index'
 
   get 'tasks/insert'
@@ -37,7 +46,6 @@ Rails.application.routes.draw do
       get :updateproject
     end
   end
-  
   root 'projects#insert'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
